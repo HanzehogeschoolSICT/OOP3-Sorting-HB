@@ -25,24 +25,7 @@ public class InsertionSort implements Algorithm {
      */
     @Override
     public ArrayList<Integer> step() {
-
-        if (lengthOfList == sortingPosition) {
-            isSorted = true;
-        } else {
-
-            for (int i = 0; i < sortingPosition; i++) {
-
-                int temp = listToSort.get(sortingPosition);
-
-                if (temp < listToSort.get(i)) {
-                    listToSort.remove(sortingPosition);
-                    listToSort.add(i, temp);
-                    break;
-                }
-            }
-            sortingPosition++;
-        }
-        return listToSort;
+        return null;
     }
 
     /**

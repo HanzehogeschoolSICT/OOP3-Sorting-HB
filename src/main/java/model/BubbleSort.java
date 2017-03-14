@@ -22,6 +22,8 @@ public class BubbleSort implements Algorithm {
 
     /**
      * Performs 1 step of the BubbleSort Algorithm.
+     * Used https://nl.wikipedia.org/wiki/Bubblesort (Steps at paragraph "Werking")
+     * to implement this method.
      *
      * @return listToSort, a partly sorted ArrayList.
      */
