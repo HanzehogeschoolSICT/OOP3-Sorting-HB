@@ -41,6 +41,8 @@ public class ViewController {
      * When invoked, the program uses InsertionSort as sorting algorithm
      */
     public void insertionSortPressed() {
+        ArrayList<Integer> list = getDataFromCurrentState();
+        algorithm = new InsertionSort(list);
 
     }
 
