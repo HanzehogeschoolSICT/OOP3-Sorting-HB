@@ -1,32 +1,26 @@
-import java.util.ArrayList;
 
-import algorithms.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
 /**
- * Created by henkbourgonje on 08/03/2017.
+ * Applications' start method, starting point of the application.
  */
-public class Main extends Application {
 
-    private static BubbleSort bubbleSort = new BubbleSort();
-    private static ArrayList<Integer> list = new ArrayList<>();
-    private static Data data = new Data();
+public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
     }
 
-
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("layout.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view.fxml"));
         primaryStage.setTitle("Sorting");
-        primaryStage.setScene(new Scene(root));
+        Scene scene = new Scene(root, 1000, 400);
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 }

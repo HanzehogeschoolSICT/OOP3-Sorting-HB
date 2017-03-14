@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewController">
+    <children>
+        <VBox alignment="TOP_CENTER">
+            <children>
+                <BarChart fx:id="barChart" animated="false" prefHeight="350.0" prefWidth="1000.0" AnchorPane.bottomAnchor="83.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="23.0">
+                    <xAxis>
+                        <CategoryAxis fx:id="yAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" fx:id="xAxis" />
+                    </yAxis>
+                </BarChart>
+            </children>
+        </VBox>
+        <Button onAction="#resetButtonPressed" layoutX="23.0" layoutY="350.0" mnemonicParsing="false" text="Reset" />
+        <Button onAction="#stepButtonPressed" layoutX="84.0" layoutY="350.0" mnemonicParsing="false" text="Step" />
+        <Button onAction="#sortButtonPressed" layoutX="141.0" layoutY="350.0" mnemonicParsing="false" text="Sort" />
+      <Button onAction="#quickSortPressed" layoutX="907.0" layoutY="350.0" mnemonicParsing="false" text="QuickSort" />
+      <Button onAction="#insertionSortPressed" layoutX="796.0" layoutY="350.0" mnemonicParsing="false" text="InsertionSort" />
+      <Button onAction="#bubbleSortPressed" layoutX="695.0" layoutY="350.0" mnemonicParsing="false" text="BubbleSort" />
+    </children>
+</AnchorPane>
