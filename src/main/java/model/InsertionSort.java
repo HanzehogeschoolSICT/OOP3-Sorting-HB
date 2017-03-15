@@ -20,12 +20,27 @@ public class InsertionSort implements Algorithm {
     }
 
     /**
-     * Performs 1 step of the InsertionSort Algorithm
-     * @return partly sorted ArrayList
+     * Performs 1 step of the InsertionSort Algorithm  * @return partly sorted ArrayList
+     * Used Georg Groenendaal's implementation of this algorithm in a small degree for inspiration to
+     * complete the task.
      */
     @Override
     public ArrayList<Integer> step() {
-        return null;
+        if (lengthOfList == sortingPosition) {
+            isSorted = true;
+        } else {
+            for (int i = 0; i < sortingPosition; i++) {
+                int temp = listToSort.get(sortingPosition);
+
+                if (temp < listToSort.get(i)) {
+                    listToSort.remove(sortingPosition);
+                    listToSort.add(i, temp);
+                    break;
+                }
+            }
+            sortingPosition++;
+        }
+        return listToSort;
     }
 
     /**
