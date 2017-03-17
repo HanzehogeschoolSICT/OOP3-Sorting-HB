@@ -29,7 +29,7 @@
       <Slider fx:id="valueSlider" layoutX="247.0" layoutY="372.0" max="200.0" min="20.0" prefHeight="33.0" prefWidth="187.0" showTickLabels="true" showTickMarks="true" value="40.0" />
       <Label layoutX="695.0" layoutY="351.0" text="Choose sorting algorithm:" />
       <Label layoutX="247.0" layoutY="351.0" text="Number of values:" />
-      <Label layoutX="470.0" layoutY="351.0" text="Interval speed (ms):" />
-      <Slider fx:id="intervalSlider" layoutX="470.0" layoutY="372.0" max="1000.0" min="10.0" prefHeight="33.0" prefWidth="187.0" showTickLabels="true" showTickMarks="true" value="40.0" />
+      <Label layoutX="464.0" layoutY="351.0" text="Choose sorting speed(ms):" />
+      <Slider fx:id="intervalSlider" layoutX="464.0" layoutY="372.0" max="500.0" min="10.0" prefHeight="33.0" prefWidth="187.0" showTickLabels="true" showTickMarks="true" value="40.0" />
     </children>
 </AnchorPane>
