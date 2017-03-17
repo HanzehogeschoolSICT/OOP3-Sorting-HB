@@ -14,9 +14,11 @@ public class BarChartGenerator {
      * Transfers random ArrayList to XYCHart to be user for the values of the BarChart.
      *
      * @return barChartValues
+     * @param value
      */
-    public static XYChart.Series newBarChartSeries() {
-        ArrayList<Integer> list = generateValues(20); //TODO Make maxIndex choosable by user
+    public static XYChart.Series newBarChartSeries(double value) {
+
+        ArrayList<Integer> list = generateValues(value);
         XYChart.Series barChartValues = new XYChart.Series();
 
         for (int n = 0; n < list.size(); n++) {
@@ -31,9 +33,9 @@ public class BarChartGenerator {
      * @param maxIndex
      * @return Random ArrayList
      */
-    public static ArrayList<Integer> generateValues(int maxIndex) {
+    public static ArrayList<Integer> generateValues(double maxIndex) {
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 0; i < maxIndex; i++) {
+        for (int i = 1; i < maxIndex + 1; i++) {
             list.add(i);
         }
         Collections.shuffle(list);

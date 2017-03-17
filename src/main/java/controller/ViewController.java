@@ -7,8 +7,12 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Slider;
 import model.*;
 import model.Algorithm;
+import model.algorithms.BubbleSort;
+import model.algorithms.InsertionSort;
+import model.algorithms.QuickSort;
 
 import java.util.ArrayList;
 
@@ -26,6 +30,12 @@ public class ViewController {
 
     @FXML
     BarChart<String, Number> barChart;
+
+    @FXML
+    Slider valueSlider;
+
+    @FXML
+    Slider intervalSlider;
 
     private Algorithm algorithm;
 
@@ -50,6 +60,8 @@ public class ViewController {
      * When invoked, the program uses QuickSort as sorting algorithm
      */
     public void quickSortPressed() {
+        ArrayList<Integer> list = getDataFromCurrentState();
+        algorithm = new QuickSort(list);
 
     }
 
@@ -69,7 +81,7 @@ public class ViewController {
      */
     public void resetButtonPressed() {
         barChart.getData().clear();
-        barChart.getData().add(BarChartGenerator.newBarChartSeries());
+        barChart.getData().add(BarChartGenerator.newBarChartSeries(valueSlider.getValue()));
         algorithm = null;
     }
 
@@ -80,7 +92,7 @@ public class ViewController {
         new Thread(() -> {
             while (!algorithm.isSorted()) {
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep((long)intervalSlider.getValue());
                     Platform.runLater(() -> {
                         algorithm.step();
                         updateGraph();

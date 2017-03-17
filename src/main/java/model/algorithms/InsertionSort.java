@@ -1,4 +1,6 @@
-package model;
+package model.algorithms;
+
+import model.Algorithm;
 
 import java.util.ArrayList;
 

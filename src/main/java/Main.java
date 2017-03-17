@@ -19,7 +19,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("view.fxml"));
         primaryStage.setTitle("Sorting");
-        Scene scene = new Scene(root, 1000, 400);
+        Scene scene = new Scene(root, 1000, 430);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

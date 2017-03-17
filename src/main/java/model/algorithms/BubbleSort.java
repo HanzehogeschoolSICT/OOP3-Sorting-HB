@@ -1,9 +1,14 @@
-package model;
+package model.algorithms;
+
+import model.Algorithm;
 
 import java.util.ArrayList;
 
 /**
  * BubbleSort subclass of the Algorithm interface. Peforms 1 step of the BubbleSort algorithm.
+ *
+ * This implementation is based on information from the following link:
+ *  - https://nl.wikipedia.org/wiki/Bubblesort
  */
 public class BubbleSort implements Algorithm {
 
