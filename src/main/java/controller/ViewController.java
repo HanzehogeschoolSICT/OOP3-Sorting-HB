@@ -37,10 +37,11 @@ public class ViewController {
     @FXML
     Slider intervalSlider;
 
+    //Initialize interface
     private Algorithm algorithm;
 
     /**
-     * When invoked, the program uses BubbleSort as sorting algorithm
+     * When invoked, the program uses BubbleSort as sorting algorithm.
      */
     public void bubbleSortPressed() {
         ArrayList<Integer> list = getDataFromCurrentState();
@@ -48,7 +49,7 @@ public class ViewController {
     }
 
     /**
-     * When invoked, the program uses InsertionSort as sorting algorithm
+     * When invoked, the program uses InsertionSort as sorting algorithm.
      */
     public void insertionSortPressed() {
         ArrayList<Integer> list = getDataFromCurrentState();
@@ -57,7 +58,7 @@ public class ViewController {
     }
 
     /**
-     * When invoked, the program uses QuickSort as sorting algorithm
+     * When invoked, the program uses QuickSort as sorting algorithm.
      */
     public void quickSortPressed() {
         ArrayList<Integer> list = getDataFromCurrentState();
@@ -66,7 +67,7 @@ public class ViewController {
     }
 
     /**
-     * When invoked, the program performs 1 step of the selected sorting algorithm
+     * When invoked, the program performs 1 step of the selected sorting algorithm.
      * als returns the result to the BarChart in the GUI
      */
     public void stepButtonPressed() {
@@ -76,7 +77,7 @@ public class ViewController {
     }
 
     /**
-     * Resets Barchart values for new random ones and gives the ability to choose another
+     * Resets Barchart values for new random ones and gives the ability to choose another.
      * sorting algorithm
      */
     public void resetButtonPressed() {
@@ -92,7 +93,7 @@ public class ViewController {
         new Thread(() -> {
             while (!algorithm.isSorted()) {
                 try {
-                    Thread.sleep((long)intervalSlider.getValue());
+                    Thread.sleep((long) intervalSlider.getValue());
                     Platform.runLater(() -> {
                         algorithm.step();
                         updateGraph();
@@ -105,7 +106,7 @@ public class ViewController {
     }
 
     /**
-     * Converts the current data in the BarChart to an ArrayList to be used in the sorting
+     * Converts the current data in the BarChart to an ArrayList to be used in the sorting.
      * algorithms to sort.
      *
      * @return listOfAxisData

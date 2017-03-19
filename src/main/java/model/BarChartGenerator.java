@@ -13,8 +13,8 @@ public class BarChartGenerator {
     /**
      * Transfers random ArrayList to XYCHart to be user for the values of the BarChart.
      *
+     * @param value number of values to put in the random list.
      * @return barChartValues
-     * @param value
      */
     public static XYChart.Series newBarChartSeries(double value) {
 
@@ -30,7 +30,7 @@ public class BarChartGenerator {
     /**
      * Generates random values to put in ArrayList used by BarChart.
      *
-     * @param maxIndex
+     * @param maxIndex number of values generate randomly.
      * @return Random ArrayList
      */
     public static ArrayList<Integer> generateValues(double maxIndex) {

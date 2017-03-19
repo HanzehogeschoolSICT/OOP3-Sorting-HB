@@ -15,7 +15,6 @@ public class DataGenerationTest {
     @BeforeClass
     public static void initialization() {
         bCG = new BarChartGenerator();
-
     }
 
     /**
@@ -36,7 +35,4 @@ public class DataGenerationTest {
             e.printStackTrace();
         }
     }
-
-
-
 }
